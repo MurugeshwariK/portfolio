@@ -1,0 +1,64 @@
+/* ============================================================
+   RESPONSIVE.CSS — Breakpoints for tablet & mobile
+   ============================================================ */
+
+/* ----- Tablet ≤ 1024px ----- */
+@media (max-width: 1024px){
+  .container{ padding: 0 24px; }
+  .hero-wrap{ gap: 40px !important; }
+  .about-grid{ grid-template-columns: 1fr !important; }
+  .projects-grid{ grid-template-columns: repeat(2,1fr) !important; }
+  .skills-grid{ grid-template-columns: repeat(2,1fr) !important; }
+}
+
+/* ----- Tablet / small laptop ≤ 900px ----- */
+@media (max-width: 900px){
+  .hero-wrap{ flex-direction: column-reverse !important; text-align:center; }
+  .hero-copy{ align-items:center !important; }
+  .hero-actions{ justify-content:center; }
+  .connect-row{ justify-content:center; }
+  .timeline::before{ left: 20px !important; }
+  .timeline-item{ padding-left: 56px !important; }
+  .timeline-dot{ left: 20px !important; }
+  .exp-cards{ grid-template-columns: 1fr !important; }
+}
+
+/* ----- Mobile ≤ 768px ----- */
+@media (max-width: 768px){
+  .nav-links{
+    position: fixed;
+    top: var(--nav-height);
+    left:0; right:0;
+    flex-direction: column;
+    background: var(--bg);
+    padding: 16px;
+    gap: 4px;
+    border-bottom: var(--border-hair);
+    transform: translateY(-140%);
+    opacity: 0;
+    transition: all .35s var(--ease);
+    box-shadow: var(--shadow-soft);
+  }
+  .nav-links.open{ transform: translateY(0); opacity:1; }
+  .nav-links a{ width:100%; text-align:center; padding:14px; }
+  .nav-toggle{ display:flex; }
+
+  .section{ padding: 80px 0 60px; }
+  .projects-grid{ grid-template-columns: 1fr !important; }
+  .skills-grid{ grid-template-columns: 1fr 1fr !important; }
+  .achv-grid{ grid-template-columns: 1fr !important; }
+  .cert-grid{ grid-template-columns: repeat(2,1fr) !important; }
+  .contact-grid{ grid-template-columns: 1fr !important; }
+  .footer .container{ flex-direction:column; text-align:center; align-items:center; }
+}
+
+/* ----- Small mobile ≤ 480px ----- */
+@media (max-width: 480px){
+  .container{ padding: 0 18px; }
+  .brand{ font-size: 1.1rem; }
+  .hero-photo-wrap{ width: 220px !important; height: 220px !important; }
+  .skills-grid{ grid-template-columns: 1fr !important; }
+  .cert-grid{ grid-template-columns: 1fr !important; }
+  .btn{ padding: 12px 22px; font-size: .88rem; }
+  .section-title{ font-size: 1.6rem; }
+}
