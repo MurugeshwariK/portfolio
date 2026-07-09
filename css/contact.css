@@ -1,0 +1,104 @@
+/* ============================================================
+   CONTACT.CSS
+   ============================================================ */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info-card{
+  padding: 38px 32px;
+}
+.contact-info-card h3{ font-size: 1.3rem; margin-bottom: 8px; }
+.contact-info-card > p{ margin-bottom: 26px; }
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(62,48,43,.08);
+}
+.contact-item:first-of-type{ border-top:none; }
+.contact-item .ic{
+  width: 46px; height:46px;
+  border-radius:50%;
+  background: var(--white);
+  color: var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  border: var(--border-hair);
+}
+.contact-item .label{
+  font-size: .76rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 2px;
+}
+.contact-item .value{
+  font-weight:600;
+  color: var(--text-primary);
+  font-size: .95rem;
+  word-break: break-word;
+}
+.contact-item a.value:hover{ color: var(--gold); }
+
+.contact-form-card{
+  padding: 38px 36px;
+}
+.contact-form-card h3{ font-size: 1.3rem; margin-bottom: 26px; }
+
+.form-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-group{
+  margin-bottom: 22px;
+  position: relative;
+}
+.form-group label{
+  display:block;
+  font-size: .82rem;
+  font-weight:600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(62,48,43,.15);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: .92rem;
+  color: var(--text-primary);
+  transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px var(--gold-soft);
+  outline:none;
+}
+.form-group textarea{ resize: vertical; min-height: 130px; }
+
+.form-status{
+  margin-top: 10px;
+  font-size: .88rem;
+  font-weight:600;
+  min-height: 1.2em;
+}
+.form-status.success{ color: #5aa16c; }
+.form-status.error{ color: #b5504a; }
+
+@media (max-width: 640px){
+  .form-row{ grid-template-columns: 1fr; }
+}

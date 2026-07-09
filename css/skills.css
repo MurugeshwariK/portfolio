@@ -1,0 +1,53 @@
+/* ============================================================
+   SKILLS.CSS — Category cards with skill badges
+   ============================================================ */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.skill-card{
+  padding: 32px 28px;
+}
+.skill-head{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.skill-ic{
+  width: 50px; height:50px;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  color: var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: var(--border-hair);
+}
+.skill-head h3{ font-size: 1.15rem; margin:0; }
+.skill-head p{ margin:0; font-size: .78rem; color: var(--text-secondary); }
+
+.badge-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+}
+.badge{
+  background: var(--white);
+  border: var(--border-hair);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all .3s var(--ease);
+  cursor:default;
+}
+.badge:hover{
+  background: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
